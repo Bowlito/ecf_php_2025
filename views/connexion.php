@@ -1,5 +1,9 @@
 <?php
 session_start();
+session_unset();
+session_destroy();
+
+session_start();
 
 
 ?>
@@ -12,7 +16,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../views/_dependencies/bootstrap.min.css">
+    <link rel="stylesheet" href="./partials/bootstrap.min.css">
     <title>Connexion</title>
 </head>
 
@@ -30,25 +34,25 @@ session_start();
         </nav>
     </header>
     <main class="mt-5 d-flex flex-column align-items-center">
-        <h1 class="mb-5 text-warning">Connexion à l'espace utilisateur</h1>
+        <h1 class="mb-5 text-warning">Connexion à l'espace administrateur</h1>
 
 
 
-        <form class="col-3 p-4 rounded-4 border border-warning bg-warning" method="POST">
+        <form action="../src/controller/admin_controller.php" class="col-3 p-4 rounded-4 border border-warning bg-warning" method="POST">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label text-light">Email</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3">
+                    <input type="email" class="form-control" id="inputEmail3" name="mail">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label text-light">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3">
+                    <input type="password" class="form-control" id="inputPassword3" name="mdp">
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-light text-warning offset-5">Sign in</button>
+            <button type="submit" class="btn btn-light text-warning offset-5">Se connecter</button>
         </form>
 
     </main>

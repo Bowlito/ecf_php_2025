@@ -34,7 +34,7 @@ CREATE TABLE livres
 id INT PRIMARY KEY AUTO_INCREMENT,
 auteur_id INT,
 admin_id INT,
-added DATE,
+added DATETIME,
 titre VARCHAR(30) UNIQUE,
 categories VARCHAR(30),
 annee_publication INT,
@@ -49,5 +49,34 @@ CREATE TABLE auteurs
 id INT PRIMARY KEY AUTO_INCREMENT,
 nom_complet VARCHAR(50),
 nationalite VARCHAR(20)
+
+);
+
+
+INSERT INTO auteurs VALUES 
+(
+
+NULL,
+"Eric Vain",
+"Dislexique"
+
+
+);
+INSERT INTO auteurs VALUES 
+(
+
+NULL,
+"Panndin Spi",
+"Epuisé"
+
+
+);
+INSERT INTO auteurs VALUES 
+(
+
+NULL,
+"Maldec Rane",
+"Fatigué"
+
 
 );
