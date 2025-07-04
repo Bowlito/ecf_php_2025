@@ -7,7 +7,7 @@ include "../src/services/admin_service.php";
 
 $prenom = $_SESSION['prenom'];
 
-var_dump($_SESSION);
+var_dump(check_user($_SESSION['prenom'], ""));
 
 //show_books();
 
